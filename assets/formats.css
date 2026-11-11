@@ -1,0 +1,23 @@
+/* formats: the letter sheet, its blanks and the fill-in boxes */
+.fmt .lead{font-size:1.05rem;color:var(--soft)}
+.sheet{margin:14px 0 22px}
+.letter{white-space:pre-wrap;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 16px;font-size:1rem;line-height:1.65;overflow-wrap:anywhere}
+.letter[lang=hi]{font-family:'Noto Sans Devanagari','Nirmala UI','Mangal',var(--font);line-height:1.8}
+.letter mark.ph{background:#fde68a;color:#3b2a00;border-radius:4px;padding:1px 3px;cursor:pointer}
+.letter mark.ph.done{background:transparent;color:inherit;border-bottom:1px dashed var(--accent);border-radius:0;padding:0}
+.fill{margin:12px 0 0}
+.fill details{background:var(--surface2)}
+.fill .fields{padding-bottom:4px}
+.sheet .btn.sm{min-height:40px}
+.letter mark.ph:focus{outline:2px solid var(--focus);outline-offset:1px;background:#fff7d6;color:#3b2a00}
+.fill .fields{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.fill label{display:block;font-weight:600;font-size:.86rem;margin-bottom:3px;color:var(--soft)}
+.fill .acts{margin:10px 0 14px}
+#printbox{display:none}
+.prose .grid{margin-top:10px}
+@media print{
+  body.pl>*:not(#main){display:none!important}
+  body.pl #main>*:not(#printbox){display:none!important}
+  body.pl #printbox{display:block!important;white-space:pre-wrap;font:12.5pt/1.7 Georgia,'Nirmala UI',serif;color:#000;padding:10mm 6mm}
+}
+.fmt .chips button{min-height:40px}
